@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-Right Positioned EZ Logo</title>
+    <style>
+        /* Atur background dan tampilan halaman */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #222;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        /* Kotak pembungkus untuk logo dengan latar belakang biru */
+        .container {
+            width: 38px;
+            height: 28px;
+            background-color: #3498db;
+            /* Latar belakang biru */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            /* Opsional: sudut kotak melengkung */
+            position: absolute;
+            top: 10px;
+            /* Jarak dari atas */
+            left: 10px;
+            /* Jarak dari kanan */
+        }
+
+        /* Gaya dasar logo dengan efek 3D */
+        .logo {
+            font-size: 16px;
+            /* Ukuran font disesuaikan agar muat di dalam kotak */
+            font-weight: bold;
+            color: #fff;
+            text-shadow:
+                1px 1px 0px #000,
+                2px 2px 0px #000,
+                3px 3px 0px #000;
+            animation: randomRotate 4s linear infinite;
+        }
+
+        /* Animasi rotasi acak */
+        @keyframes randomRotate {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            25% {
+                transform: rotateX(180deg) rotateY(90deg) rotateZ(45deg);
+            }
+
+            50% {
+                transform: rotateX(360deg) rotateY(180deg) rotateZ(90deg);
+            }
+
+            75% {
+                transform: rotateX(540deg) rotateY(270deg) rotateZ(135deg);
+            }
+
+            100% {
+                transform: rotateX(720deg) rotateY(360deg) rotateZ(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Kotak dengan latar belakang biru dan logo EZ di pojok kanan atas -->
+    <div class="container">
+        <div class="logo">EZ</div>
+    </div>
+
+</body>
+
+</html>
